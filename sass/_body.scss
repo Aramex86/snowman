@@ -1,0 +1,31 @@
+:root{
+--color-sky:#84b3ff;
+--color-snow:#fff;
+--color-bukett-dark:rgba(156, 156, 156, 0.89);
+--color-bukett-light:rgba(242, 242, 242, 0.89);
+--color-bukett-light2: rgba(242, 207, 54, 0.76);
+--color-nose: #ff7500;
+--color-primary:black;
+--color-hand: #a54901;
+--color-hand1: rgba(165, 73, 1, 0.76);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+*,
+*::after,
+*::before{
+  box-sizing: inherit;
+}
+html{
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem - 10px, 10px/16px = 62.5%
+}
+.pic-wrap{
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(to bottom,var(--color-sky),var(--color-snow));
+  position: relative;
+}

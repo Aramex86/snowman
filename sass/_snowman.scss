@@ -1,0 +1,510 @@
+.text{
+  font-size: 3rem;
+  text-align: center;
+  &__primary{
+   padding-top: 5rem;
+    text-transform: uppercase;
+    text-shadow: 0 .5rem .5rem var(--color-bukett-light);
+    color: var(--color-bukett-light);
+  }
+}
+
+.snowman-wrap {
+  width: 80rem;
+  height: 50rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  &__buket {
+    width: 7rem;
+    height: 7rem;
+    background-image: linear-gradient(to right, var(--color-bukett-light), var(--color-bukett-dark));
+    position: absolute;
+    top: 33%;
+    left: 45.5%;
+    z-index: 1;
+    -webkit-clip-path: polygon(0% 100%, 100% 100%, 79% 22%, 14% 21%);
+    clip-path: polygon(0% 100%, 100% 100%, 79% 22%, 14% 21%);
+    border-radius: 57% 0% 11% 11%;
+
+    span {
+      width: 100%;
+      height: 3rem;
+      border: 1px solid rgba(87, 87, 87, 0.6);
+      display: block;
+      border-top: none;
+      position: absolute;
+      top: -6%;
+      z-index: 999;
+      border-radius: 80%;
+    }
+  }
+  &__head {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    background-color: var(--color-snow);
+    position: absolute;
+    top: 51%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+
+    &--lefteye {
+      width: 3rem;
+      height: 3rem;
+      position: absolute;
+      top: 25%;
+      left: 11%;
+      -webkit-clip-path: ellipse(29% 40% at 50% 50%);
+      clip-path: ellipse(29% 40% at 50% 50%);
+      background-color: rgba(182, 182, 182, 0.54);
+    }
+    &--righteye {
+      width: 3rem;
+      height: 3rem;
+      position: absolute;
+      top: 25%;
+      right: 11%;
+      -webkit-clip-path: ellipse(29% 40% at 50% 50%);
+      clip-path: ellipse(29% 40% at 50% 50%);
+      background-color: rgba(182, 182, 182, 0.54);
+    }
+    &--nose {
+      width: 3rem;
+      height: 4rem;
+      position: absolute;
+      background-color: var(--color-nose);
+      top: 31%;
+      left: 47%;
+      -webkit-clip-path: polygon(0 35%, 100% 51%, 0 63%);
+      clip-path: polygon(0 35%, 100% 51%, 0 63%);
+      border-radius: 47% 85% 43% 98%;
+      transform: rotate(-5deg);
+    }
+    &--mouth {
+      width: 4rem;
+      height: 3rem;
+      position: absolute;
+      top: 44%;
+      left: 27%;
+      border-radius: 50%;
+      border: 2px solid var(--color-primary);
+      border-top: none;
+      border-left: none;
+      border-right: none;
+    }
+  }
+  &__midlle {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    background-color: var(--color-snow);
+    position: absolute;
+    top: 66%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    &--button1 {
+      width: 1rem;
+      height: 1rem;
+      background-color: var(--color-primary);
+      position: absolute;
+      top: 22%;
+      left: 46%;
+      border-radius: 50%;
+    }
+    &--button2 {
+      width: 1rem;
+      height: 1rem;
+      background-color: var(--color-primary);
+      position: absolute;
+      top: 38%;
+      left: 46%;
+      border-radius: 50%;
+    }
+    &--button3 {
+      width: 1rem;
+      height: 1rem;
+      background-color: var(--color-primary);
+      position: absolute;
+      top: 55%;
+      left: 46%;
+      border-radius: 50%;
+    }
+  }
+  &__lefthand {
+    height: 0.5rem;
+    width: 4rem;
+    background-image: linear-gradient(to left, var(--color-hand1), var(--color-hand));
+    position: absolute;
+    top: 61%;
+    left: 40%;
+    transition: all .2s ease;
+
+    animation: handMove 2s infinite;
+
+    &--top {
+      width: 4rem;
+      height: .5rem;
+      background-image: linear-gradient(to top, var(--color-hand1), var(--color-hand));
+      position: absolute;
+      right: 2%;
+      top: 488%;
+      transform: rotate(33deg) translate(-111%, -242%);
+      border-radius: 53% 0% 0% 32%;
+
+      &--finger1{
+        width: 1rem;
+        height: .3rem;
+        transform: rotate(-103deg) translate(32%, -34%);
+        background-image: linear-gradient(to top, var(--color-hand1), var(--color-hand));
+        border-radius: 0% 100% 0% 0%;
+      }
+      &--finger2{
+        width: 1.3rem;
+        height: .3rem;
+        transform: rotate(-151deg) translate(69%, -33%);
+        background-image: linear-gradient(to top, var(--color-hand1), var(--color-hand));
+        border-radius: 0% 100% 0% 0%;
+      }
+      &--finger3{
+        width: 1.3rem;
+        height: .3rem;
+        transform: rotate(161deg) translate(58%, 103%);
+        background-image: linear-gradient(to top, var(--color-hand1), var(--color-hand));
+        border-radius: 0% 100% 0% 0%;
+      }
+      &--finger4{
+        width: 1.3rem;
+        height: .3rem;
+        transform: rotate(118deg) translate(11%, 158%);
+        background-image: linear-gradient(to top, var(--color-hand1), var(--color-hand));
+        border-radius: 0% 100% 0% 0%;
+      }
+    }
+
+  }
+  &__righthand {
+    height: 0.5rem;
+    width: 4rem;
+    background-image: linear-gradient(to left, var(--color-hand1), var(--color-hand));
+    position: absolute;
+    top: 63%;
+    right: 40%;
+    transform: rotate(23deg);
+    &--top {
+      width: 4rem;
+      height: .5rem;
+      background-image: linear-gradient(to top, var(--color-hand1), var(--color-hand));
+      position: absolute;
+      right: 4%;
+      transform: rotate(115deg) translate(-63%, -347%);
+      border-radius: 53% 0% 0% 32%;
+      &--finger1{
+        width: 1.3rem;
+        height: .3rem;
+        transform: rotate(-100deg);
+        background-image: linear-gradient(to top, var(--color-hand1), var(--color-hand));
+        border-radius: 0% 100% 0% 0%;
+        position: absolute;
+        left: 109%;
+        top: -664%;
+      }
+      &--finger2{
+        width: 1.3rem;
+        height: .3rem;
+        transform: rotate(-52deg);
+        background-image: linear-gradient(to top, var(--color-hand1), var(--color-hand));
+        border-radius: 0% 100% 0% 0%;
+        position: absolute;
+        left: 124%;
+        top: -695%;
+      }
+      &--finger3{
+        width: 1.3rem;
+        height: .3rem;
+        transform: rotate(-5deg);
+        background-image: linear-gradient(to top, var(--color-hand1), var(--color-hand));
+        border-radius: 0% 100% 0% 0%;
+        position: absolute;
+        left: 133%;
+        top: -592%;
+      }
+      &--finger4{
+        width: 1.3rem;
+        height: .3rem;
+        transform: rotate(48deg);
+        background-image: linear-gradient(to top, var(--color-hand1), var(--color-hand));
+        border-radius: 0% 100% 0% 0%;
+        position: absolute;
+        left: 122%;
+        top: -511%;
+      }
+
+    }
+  }
+  &__bottom {
+    width: 16rem;
+    height: 16rem;
+    border-radius: 50%;
+    background-color: var(--color-snow);
+    position: absolute;
+    top: 86%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 4rem 7rem 10px #00000024;
+    &--button1 {
+      width: 1rem;
+      height: 1rem;
+      background-color: var(--color-primary);
+      position: absolute;
+      top: 29%;
+      left: 48%;
+      border-radius: 50%;
+    }
+    &--button2 {
+      width: 1rem;
+      height: 1rem;
+      background-color: var(--color-primary);
+      position: absolute;
+      top: 13%;
+      left: 48%;
+      border-radius: 50%;
+    }
+  }
+}
+
+.eye-midlle-left {
+  background-color: var(--color-primary);
+  width: .8rem;
+  height: .8rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 38%;
+  left: 36%;
+}
+
+.eye-midlle-right {
+  background-color: var(--color-primary);
+  width: .8rem;
+  height: .8rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 38%;
+  right: 36%;
+}
+.button-midlle{
+  width: .3rem;
+  height: .3rem;
+  background-color: var(--color-snow);
+  position: absolute;
+  left: 50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+  border-radius: 50%;
+}
+.broom{
+  width: .5rem;
+  height: 25rem;
+  background-color: #a54901;
+  position: absolute;
+  top: 49%;
+  right: 36.5%;
+  &__bottom{
+    width: 1rem;
+    height: .5rem;
+    background-color: var(--color-primary);
+    position: absolute;
+    top: -1%;
+    left: -37%;
+    z-index: 1;
+    border-radius: 31%;
+  }
+}
+.broom-top{
+  width: 6rem;
+  height: 6rem;
+  background-color: #ffd55c;
+  position: absolute;
+  top: 38%;
+  right: 33%;
+ -webkit-clip-path: polygon(53% 95%, 44% 89%, 0% 12%, 100% 0%);
+  clip-path: polygon(53% 95%, 44% 89%, 0% 12%, 100% 0%);
+  border-radius: 40% 18% 31% 58%;
+  z-index: -1;
+  overflow: hidden;
+  &__line1{
+    width: .2rem;
+    height: 100%;
+    background-color:var(--color-bukett-light2);
+    transform: rotate(-25deg);
+    position: absolute;
+    left: 27%;
+    top: 1%;
+    box-shadow: 9px 0rem 9rem 5px rgb(6, 6, 6);
+  }
+  &__line2{
+    width: .2rem;
+    height: 100%;
+    background-color: var(--color-bukett-light2);
+    transform: rotate(-18deg);
+    position: absolute;
+    left: 35%;
+    top: 1%;
+  }
+  &__line3{
+    width: .2rem;
+    height: 100%;
+    background-color: var(--color-bukett-light2);
+    transform: rotate(-7deg);
+    position: absolute;
+    left: 44%;
+    top: 1%;
+  }
+  &__line4{
+    width: .2rem;
+    height: 100%;
+    background-color: var(--color-bukett-light2);
+    transform: rotate(5deg);
+    position: absolute;
+    left: 55%;
+    top: 1%;
+  }
+  &__line5{
+    width: .2rem;
+    height: 100%;
+    background-color: var(--color-bukett-light2);
+    transform: rotate(15deg);
+    position: absolute;
+    left: 62%;
+    top: 1%;
+  }
+  &__line6{
+    width: .2rem;
+    height: 100%;
+    background-color: var(--color-bukett-light2);
+    transform: rotate(23deg);
+    position: absolute;
+    left: 70%;
+    top: 1%;
+  }
+}
+.snow1{
+  width: 22rem;
+  height: 5rem;
+  position: absolute;
+  bottom: 4%;
+  left: 50%;
+  overflow: hidden;
+  &__snow1{
+    width: 16rem;
+    height: 16rem;
+    background-color: var(--color-snow);
+    border-radius: 50%;
+    position: absolute;
+    top: 20%;
+    left: -5%;
+  }
+  &__snow2{
+    width: 16rem;
+    height: 16rem;
+    background-color: var(--color-snow);
+    border-radius: 50%;
+    position: absolute;
+    top: 31%;
+    left: 32%;
+
+  }
+
+
+}
+.snow2{
+  width: 26rem;
+  height: 5rem;
+  position: absolute;
+  bottom: 3%;
+  right: 51%;
+  overflow: hidden;
+  &__snow1{
+    width: 16rem;
+    height: 16rem;
+    background-color: var(--color-snow);
+    border-radius: 50%;
+    position: absolute;
+    top: 20%;
+    left: -3%;
+  }
+  &__snow2{
+    width: 16rem;
+    height: 16rem;
+    background-color: var(--color-snow);
+    border-radius: 50%;
+    position: absolute;
+    top: 31%;
+    left: 32%;
+
+  }
+}
+.snow3 {
+  width: 30rem;
+  height: 16rem;
+  position: absolute;
+  top: 71%;
+  left: 31%;
+  z-index: 99;
+  overflow: hidden;
+
+  &__snow1 {
+    width: 16rem;
+    height: 16rem;
+    background-color: var(--color-snow);
+    border-radius: 50%;
+    position: absolute;
+    top: 74%;
+    left: -5%;
+  }
+  &__snow3 {
+    width: 16rem;
+    height: 16rem;
+    background-color: var(--color-snow);
+    border-radius: 50%;
+    position: absolute;
+    top: 72%;
+    left: 47%;
+
+  }
+}
+@keyframes handMove {
+  0%{
+    transform: rotate(-10deg);
+  }
+  100%{
+    transform: rotate(45deg);
+
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
